@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yang小网盘 - 使用说明</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #0d6efd;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #0d6efd;
+            margin-top: 25px;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: Consolas, Monaco, 'Andale Mono', monospace;
+        }
+        .note {
+            background-color: #e7f5ff;
+            border-left: 4px solid #0d6efd;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>简易网盘 - 使用说明</h1>
+    
+    <h2>项目概述</h2>
+    <p>这是一个简洁美观的静态网盘网站，支持文件下载、链接复制和文件搜索功能。网站采用响应式设计，同时支持深色和浅色模式，能够根据系统主题自动调整。</p>
+    
+    <h2>功能特点</h2>
+    <ul>
+        <li><strong>文件下载</strong>：点击文件旁的下载按钮即可下载文件</li>
+        <li><strong>复制链接</strong>：点击链接按钮可复制文件的分享链接</li>
+        <li><strong>文件搜索</strong>：通过搜索框可以快速查找所需文件</li>
+        <li><strong>主题切换</strong>：支持深色和浅色模式，可手动切换或跟随系统设置</li>
+        <li><strong>响应式设计</strong>：适配各种设备屏幕尺寸</li>
+    </ul>
+    
+    <h2>项目结构</h2>
+    <ul>
+        <li><code>index.html</code> - 主页面</li>
+        <li><code>css/style.css</code> - 样式文件</li>
+        <li><code>js/script.js</code> - JavaScript功能实现</li>
+        <li><code>files/</code> - 存放供用户下载的文件</li>
+        <li><code>img/</code> - 存放网站使用的图片资源</li>
+    </ul>
+    
+    <h2>使用方法</h2>
+    <ol>
+        <li>将您要分享的文件放入 <code>files/</code> 文件夹中</li>
+        <li>修改 <code>js/script.js</code> 中的 <code>fileData</code> 数组，添加您的文件信息</li>
+        <li>部署网站到您的服务器或静态网站托管服务</li>
+    </ol>
+    
+    <div class="note">
+        <p><strong>注意：</strong>这是一个纯前端静态网站，没有后端服务。在实际应用中，您可能需要添加后端服务来动态获取文件列表和处理文件上传等功能。</p>
+    </div>
+    
+    <h2>自定义修改</h2>
+    <p>您可以根据需要修改以下内容：</p>
+    <ul>
+        <li>在 <code>css/style.css</code> 中修改颜色变量，自定义网站主题</li>
+        <li>在 <code>js/script.js</code> 中修改 <code>fileData</code> 数组，更新文件列表</li>
+        <li>调整 <code>index.html</code> 中的标题和页脚信息</li>
+    </ul>
+    
+    <h2>浏览器兼容性</h2>
+    <p>本网站兼容所有现代浏览器，包括但不限于：</p>
+    <ul>
+        <li>Google Chrome</li>
+        <li>Mozilla Firefox</li>
+        <li>Microsoft Edge</li>
+        <li>Safari</li>
+    </ul>
+</body>
+</html>

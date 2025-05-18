@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yang小网盘</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/upload.css">
+    <!-- 引入Font Awesome图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-cloud"></i>
+                <h1>Yang小网盘</h1>
+            </div>
+            <div class="header-controls">
+                <button id="refresh-btn" class="refresh-btn" title="刷新文件列表">
+                    <i class="fas fa-sync-alt"></i>
+                </button>
+                <div class="theme-toggle">
+                    <button id="theme-toggle-btn" aria-label="切换主题">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- 上传区域 -->
+        <div class="upload-container">
+            <div class="upload-header">
+                <div class="upload-title">
+                    <i class="fas fa-upload"></i>
+                    <span>文件上传</span>
+                </div>
+                <button id="upload-toggle" class="upload-toggle">
+                    <i class="fas fa-chevron-down"></i> 显示上传表单
+                </button>
+            </div>
+            <div id="upload-form-container" class="upload-form-container">
+                <form id="upload-form" class="upload-form">
+                    <div class="file-input-container">
+                        <label for="file-input" class="file-input-label">
+                            <i class="fas fa-file-upload"></i>
+                            选择文件
+                        </label>
+                        <input type="file" id="file-input" class="file-input" name="file">
+                        <div id="selected-file-container" class="selected-file hidden">
+                            <i class="fas fa-file"></i>
+                            <span id="selected-file-name" class="selected-file-name"></span>
+                            <button id="clear-file" class="selected-file-clear" type="button">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <button id="upload-button" class="upload-button" type="button" disabled>
+                        <i class="fas fa-upload"></i> 上传文件
+                    </button>
+                    <div class="progress-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                    <div id="upload-status" class="upload-status"></div>
+                </form>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="搜索文件...">
+                <button id="search-clear" class="hidden"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+
+        <main>
+            <div class="file-list-header">
+                <div class="file-name">文件名</div>
+                <div class="file-size">大小</div>
+                <div class="file-date">日期</div>
+                <div class="file-actions">操作</div>
+            </div>
+            <div id="file-list" class="file-list">
+                <!-- 文件列表将通过JavaScript动态生成 -->
+                <div class="loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <span>加载文件列表...</span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2025 Yang小网盘</p>
+        </footer>
+    </div>
+
+    <!-- 通知提示框 -->
+    <div id="notification" class="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-message"></span>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+</html>

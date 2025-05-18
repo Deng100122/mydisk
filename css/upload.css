@@ -1,0 +1,208 @@
+.upload-container {
+    margin-bottom: 20px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+.upload-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.upload-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.upload-title i {
+    color: var(--icon-color);
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.file-input-container {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.file-input-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.file-input-label:hover {
+    background-color: var(--hover-accent-color);
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+}
+
+.selected-file {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    background-color: var(--hover-color);
+    border-radius: 6px;
+    color: var(--text-primary);
+}
+
+.selected-file i {
+    color: var(--icon-color);
+}
+
+.selected-file-name {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.selected-file-clear {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+.selected-file-clear:hover {
+    color: var(--text-primary);
+}
+
+.upload-button {
+    padding: 12px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.upload-button:hover {
+    background-color: var(--hover-accent-color);
+}
+
+.upload-button:disabled {
+    background-color: var(--text-secondary);
+    cursor: not-allowed;
+}
+
+.progress-container {
+    height: 6px;
+    background-color: var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--accent-color);
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.upload-status {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    text-align: center;
+    margin-top: 5px;
+}
+
+.upload-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.upload-toggle:hover {
+    color: var(--accent-color);
+}
+
+.upload-form-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.upload-form-container.show {
+    max-height: 300px;
+}
+
+/* 添加到:root变量中 */
+:root {
+    /* 浅色模式变量 */
+    --bg-primary: #f8f9fa;
+    --bg-secondary: #ffffff;
+    --text-primary: #212529;
+    --text-secondary: #6c757d;
+    --border-color: #dee2e6;
+    --accent-color: #0d6efd;
+    --hover-color: #f1f3f5;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --icon-color: #0d6efd;
+    --notification-bg: rgba(25, 135, 84, 0.9);
+    --notification-text: white;
+    --hover-accent-color: #0b5ed7;
+}
+
+[data-theme="dark"] {
+    /* 深色模式变量 */
+    --bg-primary: #212529;
+    --bg-secondary: #343a40;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --border-color: #495057;
+    --accent-color: #3d8bfd;
+    --hover-color: #2b3035;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --icon-color: #3d8bfd;
+    --notification-bg: rgba(25, 135, 84, 0.9);
+    --notification-text: white;
+    --hover-accent-color: #4e95fd;
+}
